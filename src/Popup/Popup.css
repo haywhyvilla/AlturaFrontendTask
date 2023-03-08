@@ -1,0 +1,33 @@
+.section-popup {
+  width: 100%;
+  background: #121212d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.center {
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #15141b;
+  border-radius: 20px;
+  width: 446px;
+  height: 475px;
+}
+
+.center img {
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+}
+
+.nftPop {
+  display: none;
+}
