@@ -8,7 +8,7 @@ const nfts = ({ nft }) => {
         <p>{nft.name}</p>
       </div>
       <div>
-        <img src={nft.image} />
+        <img src={nft.image} alt="img-nft" />
       </div>
 
       <div>
