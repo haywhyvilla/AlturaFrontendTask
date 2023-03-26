@@ -8,7 +8,6 @@ import Popup from "./Popup/Popup";
 function App() {
   const [inputText, setInputText] = useState("");
   const [searchedNfts, setSearchedNfts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [selectedNft, setSelectedNft] = useState({
     name: "",
     description: "",
@@ -26,7 +25,6 @@ function App() {
   const alchemy = new Alchemy(config);
 
   const main = async () => {
-    setIsLoading(true);
     // Get all NFTs
     const tempNftStore = [];
 
@@ -49,7 +47,6 @@ function App() {
       console.log(err);
     }
     setSearchedNfts(tempNftStore);
-    setIsLoading(false);
   };
 
   const switchSelected = (id) => {
@@ -57,7 +54,7 @@ function App() {
     setPopActive(true);
   };
   return (
-    <div className="App">
+    <div className="App" onClick={switchSelected}>
       <Home inputText={inputText} setInputText={setInputText} main={main} />
       <div className="container">
         {searchedNfts.map((nft, key) => (
